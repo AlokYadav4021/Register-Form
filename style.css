@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: sans-serif;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  background-image: url(./gilles-lambert-mSK5nNsAsLY-unsplash.jpg);
+  background-size: 100% 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .core {
+  height: 90%;
+  width: 95%;
+  display: flex;
+}
+
+.core .left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.295);
+  backdrop-filter: blur(3px);
+}
+
+.core .left h3 {
+  font-size: 3em;
+}
+
+.core .left p {
+  width: 85%;
+  font-size: 15px;
+  margin: 20px 0 0 0;
+}
+.core .right {
+  height: 100%;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.637);
+  backdrop-filter: blur(3px);
+
+  /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; */
+  text-align: center;
+}
+
+.right h5 {
+    margin: 20px;
+  font-size: 1.8em;
+}
+
+.right form {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.right form button {
+  height: 10%;
+  width: 40%;
+  background-color: #047f49;
+  border: none;
+  margin: 30px 0 0 0;
+  font-size: 20px;
+  /* font-weight: bold; */
+}
+
+.right form > .inp {
+  height: 15%;
+  width: 80%;
+  border-bottom: 1px solid grey;
+  text-align: start;
+}
+.right form > .inp label {
+  line-height: 80px;
+  font-size: 15px;
+}
+form > .inp input {
+  height: 30px;
+  width: 70%;
+  margin: 0 0 0 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.bottom {
+  height: 10%;
+  /* width: 80%; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bottom p:last-child {
+  color: #047f49;
+}
