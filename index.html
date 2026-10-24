@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="main">
@@ -19,25 +26,34 @@
         </div>
         <div class="right">
           <h5>Sign Up</h5>
-          <form action="">
+          <form action="homepage.html" onsubmit="return usrname();">
             <div class="inp">
-              <label for="">Your Name :</label>
-              <input type="text" name="" id="" />
+              <label for="username">Your Name :</label>
+              <input type="text" name="" id="username" />
             </div>
+            <span id="user_na"></span>
             <div class="inp">
               <label for="">Your Email :</label>
-              <input type="email" name="" id="" />
+              <input type="text" name="" id="email" />
             </div>
+            <span id="mail"></span>
+
             <div class="inp">
               <label for=""> Create Password :</label>
-              <input type="password" name="" id="" />
+                <input type="password" name="" id="password" /> <i
+                  class="fa-regular fa-eye"
+                  style="color: rgb(255, 255, 255)"
+                  id="visb"
+                ></i>
             </div>
+            <span id="passwd"></span>
             <div class="inp">
               <label for="">Confirm Password :</label>
-              <input type="password" name="" id="" />
+              <input type="text" name="" id="conformpassword" />
             </div>
+            <span id="confrpass"></span>
 
-            <button>Sign up</button>
+            <button id="submit" onclick="username()">Sign up</button>
           </form>
           <div class="bottom">
             <p>Already Member ?</p>
