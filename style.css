@@ -102,8 +102,9 @@ form > .inp input {
   background-color: transparent;
 }
 
-.bottom p{
+.bottom a{
   cursor: pointer;
+  text-decoration: none;
 }
 .bottom {
   height: 10%;

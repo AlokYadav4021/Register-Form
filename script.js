@@ -7,19 +7,16 @@ let uname = /^[a-zA-Z]+$/;
 let midd = /^[a-zA-Z][a-zA-Z0-9_.]+@[a-zA-Z0-9]+.[a-zA-Z0-9]{2,3}$/;
 let pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*!_]).{8,}$/;
 
-
-let pasvisb = document.getElementById("visb")
-pasvisb.addEventListener("click", function(){
-  if(pasword.type === "password"){
-    pasword.type = "text"
-  }else{
+let pasvisb = document.getElementById("visb");
+pasvisb.addEventListener("click", function () {
+  if (pasword.type === "password") {
+    pasword.type = "text";
+  } else {
     pasword.type = "password";
   }
-})
-
+});
 
 function usrname() {
- 
   if (username.value == "") {
     document.getElementById("user_na").innerHTML = "enter the user name";
     return false;
@@ -69,18 +66,53 @@ function usrname() {
     document.getElementById("passwd").innerHTML =
       "Length of the password should be less then 15";
     return false;
-  }
-  else if(!pasword.value.match(pass)){
-    document.getElementById("passwd").innerHTML = "password formate is wrong"
+  } else if (!pasword.value.match(pass)) {
+    document.getElementById("passwd").innerHTML = "password formate is wrong";
   }
 
   // Confirm Password
 
+  if (pasword.value !== conformpassword.value) {
+     document.getElementById("confrpass").innerHTML =
+       "Password is not Matching";
+    return false;
 
-  if(pasword.value === conformpassword.value){
-    return true
-  }else{
-    document.getElementById("confrpass").innerHTML = "Password is not Matching";
-    return false
+  } 
+
+
+
+
+
+    let name=username.value;
+    let emailid =mail.value;
+    let passd =pasword.value;
+
+    localStorage.setItem("User name", name);
+    console.log(name);
+    localStorage.setItem("email", emailid);
+    localStorage.setItem("password", passd);
+
+    let user_record = new Array();
+
+    user_record = JSON.parse(localStorage.getItem("user")) || [];
+
+    if (user_record.some((val) => val.email === emailid)) {
+      alert("Duplicate Data");
+    } else {
+      user_record.push({
+        name: name,
+        email: emailid,
+        pass: passd,
+      });
+
+      localStorage.setItem("user", JSON.stringify(user_record));
+
+      alert("User registered");
+    }
+
+
+    
   }
-}
+
+
+

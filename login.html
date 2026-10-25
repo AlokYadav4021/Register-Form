@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="core">
+        <div class="left">
+          <h3>Let's Get Started</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius
+            dolores commodi ab tempore architecto nostrum itaque assumenda
+            voluptatibus provident nemo?
+          </p>
+        </div>
+        <div class="right">
+          <h5>Log-in</h5>
+          <form action="homepage.html" onsubmit="return logim()">
+            <div class="inp">
+              <label for="">Enter Email :</label>
+              <input type="text" name="" id="email" />
+            </div>
+            <span id="mail"></span>
+            <div class="inp">
+              <label for="">Enter Password :</label>
+              <input type="text" name="" id="password" />
+            </div>
+            <span id="confrpass"></span>
+
+            <button id="submit" onclick="username()">Log-in</button>
+          </form>
+          <div class="bottom">
+            <a href="">Already Member ?</a>
+            <a href="./index.html">Sign-in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./login.js"></script>
+  </body>
+</html>
